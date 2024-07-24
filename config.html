@@ -3,14 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Configuration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            height: 100vh;
+        }
+        h1, h2 {
+            font-size: 22px;
+            color: #333;
+            margin: 0 0 15px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input[type="date"], input[type="text"], select, button {
+            font-size: 16px;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            padding: 12px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        li {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 5px 0;
+            padding: 10px;
+        }
+        @media (max-width: 600px) {
+            input[type="date"], input[type="text"], select, button {
+                font-size: 14px;
+                padding: 8px;
+            }
+            h1, h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="main">
+    <div class="container">
         <h1>Configuration</h1>
         
         <select name="month" id="monthSelect">
-          <option value="months">month</option>
+          <option value="">Select Month</option>
           <option value="january">January</option>
           <option value="february">February</option>
           <option value="march">March</option>
@@ -24,69 +99,59 @@
           <option value="november">November</option>
           <option value="december">December</option>
         </select>
+
+        <div class="postingdates">
+            <h2>Posting Dates</h2>
+            <!-- Repeat for each post -->
+            <label for="inpost1_start">Post 1 Start</label>
+            <input type="date" id="inpost1_start">
+            <label for="inpost1_end">Post 1 End</label>
+            <input type="date" id="inpost1_end">
+
+            <label for="inpost2_start">Post 2 Start</label>
+            <input type="date" id="inpost2_start">
+            <label for="inpost2_end">Post 2 End</label>
+            <input type="date" id="inpost2_end">
+
+            <label for="inpost3_start">Post 3 Start</label>
+            <input type="date" id="inpost3_start">
+            <label for="inpost3_end">Post 3 End</label>
+            <input type="date" id="inpost3_end">
+
+            <label for="inpost4_start">Post 4 Start</label>
+            <input type="date" id="inpost4_start">
+            <label for="inpost4_end">Post 4 End</label>
+            <input type="date" id="inpost4_end">
+
+            <label for="inpost5_start">Post 5 Start</label>
+            <input type="date" id="inpost5_start">
+            <label for="inpost5_end">Post 5 End</label>
+            <input type="date" id="inpost5_end">
+
+            <label for="inpost6_start">Post 6 Start</label>
+            <input type="date" id="inpost6_start">
+            <label for="inpost6_end">Post 6 End</label>
+            <input type="date" id="inpost6_end">
+        </div>
+
+        <div class="postingNames">
+            <h2>All Postings</h2>
+            <input type="text" id="allpost" placeholder="Enter new posting">
+            <button id="addPostingButton">Add Posting</button>
+            <ul id="postingList">
+                <!-- List items will go here -->
+            </ul>
+        </div>
+
+        <button id="saveButton">Save</button>
     </div>
-    <br><br>
-    <div class="postingdates">
-        <!-- Post fields -->
-        <label for="inpost1">Post 1</label>
-        <br><br>
-        <label for="">Start</label>
-        <input type="date" id="inpost1_start">
-        <label for="">End</label>
-        <input type="date" id="inpost1_end">
-        <br><br>
-        <label for="inpost2">Post 2</label>
-        <br><br>
-        <label for="">Start</label>
-        <input type="date" id="inpost2_start">
-        <label for="">End</label>
-        <input type="date" id="inpost2_end">
-        <br><br>
-        <label for="inpost3">Post 3</label>
-        <br><br>
-        <label for="">Start</label>
-        <input type="date" id="inpost3_start">
-        <label for="">End</label>
-        <input type="date" id="inpost3_end">
-        <br><br>
-        <label for="inpost4">Post 4</label>
-        <br><br>
-        <label for="">Start</label>
-        <input type="date" id="inpost4_start">
-        <label for="">End</label>
-        <input type="date" id="inpost4_end">
-        <br><br>
-        <label for="inpost5">Post 5</label>
-        <br><br>
-        <label for="">Start</label>
-        <input type="date" id="inpost5_start">
-        <label for="">End</label>
-        <input type="date" id="inpost5_end">
-        <br><br>
-        <label for="inpost6">Post 6</label>
-        <br><br>
-        <label for="">Start</label>
-        <input type="date" id="inpost6_start">
-        <label for="">End</label>
-        <input type="date" id="inpost6_end">
-        <br>
-    </div>
-    <br><br>
-    <div class="postingNames">
-        <h1>All Posting</h1>
-        <input type="text" id="allpost">
-        <button id="addPostingButton">Add Posting</button>
-        <ul id="postingList">
-            <!-- List items will go here -->
-        </ul>
-    </div>
-    <button id="saveButton">Save</button>
+
     <script>
         const postingsList = [];
-    
+
         function addPosting() {
             const postText = document.getElementById('allpost').value.trim();
-    
+
             if (postText) {
                 postingsList.push(postText);
                 const li = document.createElement('li');
@@ -97,10 +162,10 @@
                 alert('Please enter a posting.');
             }
         }
-    
+
         function submitData() {
             const month = document.getElementById('monthSelect').value;
-    
+
             // Create a postings object
             const postings = {};
             document.querySelectorAll('.postingdates input[type="date"]').forEach((input, index) => {
@@ -110,15 +175,15 @@
                     postings[`post${postNumber}`].push({ start: input.value, end: document.querySelector(`#inpost${postNumber}_end`).value });
                 }
             });
-    
+
             const allposting = postingsList;
-    
+
             const data = {
                 month: month,
                 postings: [postings],
                 allposting: allposting
             };
-    
+
             fetch('https://nursing-backend.vercel.app/config', {
                 method: 'POST',
                 headers: {
@@ -128,7 +193,6 @@
             })
             .then(response => {
                 if (!response.ok) {
-                    // Response status is not OK
                     return response.text().then(text => { throw new Error(text); });
                 }
                 return response.json();
@@ -142,10 +206,9 @@
                 alert(`Error: ${error.message}`);
             });
         }
-    
+
         document.getElementById('addPostingButton').addEventListener('click', addPosting);
         document.getElementById('saveButton').addEventListener('click', submitData);
     </script>
-    
 </body>
 </html>
