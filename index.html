@@ -3,48 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Config Form</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Postings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 70%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: ;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .download-btn {
+            display: block;
+            width: calc(100% - 20px);
+            margin: 10px auto;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50%;
+        }
+
+        .input-group input {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: calc(100% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .input-group button {
+            width: calc(100% - 20px);
+        }
+    </style>
 </head>
 <body>
-    <div class="config-form">
-        <div class="config-header">
-            <label for="type-posting">Type Posting</label>
-            <input type="text" id="type-posting" name="type-posting">
-            <button id="add-btn">Add</button>
+    <div class="container">
+        <h1>POSTINGS</h1>
+        <div class="buttons">
+            <button class="config-btn" onclick="window.open('config.html')">1.Configuration</button>
+            <button class="students-btn" onclick="window.open('student.html')">2.Students list</button>
         </div>
-        <div class="config-body">
-            <label for="month">Month</label>
-            <select id="month" name="month">
-                
-            </select>
-            <div class="posts">
-                <select id="post1" name="post1">
-                    
-                </select>
-                <select id="post2" name="post2">
-            
-                </select>
-                <select id="post3" name="post3">
-        
-                </select>
-                <button id="option-btn">Option Button</button>
-            </div>
-        </div>
-        <div class="config-footer">
-            <div class="date-field">
-                <label for="start-date">Startify</label>
-                <input type="date" id="start-date" name="start-date">
-                <input type="date" id="start-date2" name="start-date2">
-            </div>
-            <div class="date-field">
-                <label for="end-date">Ending</label>
-                <input type="date" id="end-date" name="end-date">
-                <input type="date" id="end-date2" name="end-date2">
-            </div>
-            <button id="save-btn">Save</button>
+        <button class="download-btn">3.Download</button>
+        <div class="input-group">
+            <input type="text" placeholder="Databases">
+            <input type="password" placeholder="Password">
+            <button class="login-btn">Login</button>
         </div>
     </div>
-    <script src="index.js"></script>
 </body>
 </html>
