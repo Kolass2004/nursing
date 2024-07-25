@@ -5,7 +5,7 @@
    
     <title>clinical posting allocation</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/print-js/1.6.0/print.min.css">
+   
 
 </head>
 <body>
@@ -33,17 +33,8 @@
     </div>
 
     <!-- Your content -->
-    <button onclick="printContent()">Print</button>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/print-js/1.6.0/print.min.js"></script>
-    <script>
-        function printContent() {
-            printJS({
-                printable: 'student-container',
-                type: 'html',
-                css: 'https://cdnjs.cloudflare.com/ajax/libs/print-js/1.6.0/print.min.css'
-            });
-        }
-    </script>
+    <button onclick="window.print()">Print</button>
+   
     <script src="index.js"></script>
 </body>
 </html>
