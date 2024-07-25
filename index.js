@@ -14,7 +14,7 @@ let postMonth = document.getElementById('postMonth')
 let count = 0 ;
 const tableList = document.getElementById('tableList');
 
-fetch('https://nursing-backend.vercel.app/data').then(
+fetch('https://nursing-backend.vercel.app/submitData').then(
     res => {
         console.log(res.status);
         return res.json()
